@@ -1,4 +1,4 @@
-# Bad Solution use stack next time 
+# Bad Solution use stack next time
 s1 = "(())"
 s2 = "(()[]())"
 s3 = "("
