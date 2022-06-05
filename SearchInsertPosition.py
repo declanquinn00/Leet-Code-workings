@@ -4,9 +4,16 @@ def searchInsert(nums, target):
     :type target: int
     :rtype: int
     """
-    for i in range(0, len(nums)):
-        if nums[i] == target:
-            return i
-        elif nums[i] > target:
-            return i
-    return len(nums)
+    l = 0
+    r = len(nums)-1
+
+    while l <= r:
+        m = (l+r)//2
+        if target == nums[m]:
+            return m
+        elif target > nums[m]:
+            l = m + 1
+        else:
+            r = m - 1
+    else:
+        return l
