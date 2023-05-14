@@ -12,6 +12,8 @@ def isPalindrome(s):
             s2.append(s[i])
 
     halfPlusOne = int((len(s2) / 2) + 1)
+    if halfPlusOne == 1:
+        return False
 
     for j in range(0, halfPlusOne):
         if s2[j] != s2[(len(s2)-1) - j]:
